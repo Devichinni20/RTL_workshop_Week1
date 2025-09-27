@@ -41,7 +41,7 @@ To get the most out of this workshop, you should have:
 
 Each day of the workshop is stored in its own folder, with a dedicated README covering concepts, examples, and lab work.  
 
-- [Day 1: Verilog RTL Design & First Steps in Synthesis](Day1)  
+- [Day 1: Verilog RTL Design & First Steps in Synthesis](Day1)(Day1.zip) 
 - [Day 2: Timing Libraries, Flip-Flop Coding, and Synthesis Strategies](Day_2/README.md)  
 - [Day 3: Optimizing Combinational & Sequential Circuits]  
 - [Day 4: Gate-Level Simulation, Blocking vs Non-Blocking, and Debugging Mismatches] 
