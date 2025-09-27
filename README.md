@@ -1,79 +1,71 @@
-RTL Design & Synthesis Workshop with Sky130
+# [RTL Design & Synthesis Workshop with Sky130](https://www.vlsisystemdesign.com/rtl-design-using-verilog-with-sky130-technology/)  
 
-Welcome to the RTL Design & Synthesis Workshop 🚀
-This repository is a step-by-step learning journey into Verilog RTL design, digital simulation, synthesis, and optimization using the open-source Sky130 PDK. Each day introduces new concepts through practical labs, example codes, and clear explanations.
+Welcome to the **RTL Design & Synthesis Workshop** 🚀  
+This repository is a step-by-step learning journey into Verilog RTL design, digital simulation, synthesis, and optimization using the open-source **Sky130 PDK**. Each day introduces new concepts through practical labs, example codes, and clear explanations.  
 
-📑 Contents
+---
 
-Overview
+## 📑 Contents  
 
-What You Need Before Starting
+- [Overview](#overview)  
+- [What You Need Before Starting](#what-you-need-before-starting)  
+- [How the Workshop is Organized](#how-the-workshop-is-organized)  
+- [License](#license)  
+- [Credits](#credits)  
 
-How the Workshop is Organized
+---
 
-License
+## Overview  
 
-Credits
+This workshop is designed for **students, beginners, and practicing engineers** who want hands-on exposure to:  
 
-Overview
+- Writing Verilog RTL and running simulations  
+- Using **Icarus Verilog** + **GTKWave** for debugging waveforms  
+- Performing logic synthesis with **Yosys** and the Sky130 open-source libraries  
+- Learning essentials such as testbenches, timing models, flip-flop styles, and design optimization  
 
-This workshop is designed for students, beginners, and practicing engineers who want hands-on exposure to:
+---
 
-Writing Verilog RTL and running simulations
+## What You Need Before Starting  
 
-Using Icarus Verilog + GTKWave for debugging waveforms
+To get the most out of this workshop, you should have:  
 
-Performing logic synthesis with Yosys and the Sky130 open-source libraries
+- A basic background in digital circuits (logic gates, multiplexers, flip-flops)  
+- Comfort with Linux terminal commands  
+- Access to a Linux machine (native or via WSL on Windows/macOS)  
+- Installed tools: `git`, `iverilog`, `gtkwave`, `yosys`, and a code editor of your choice  
 
-Learning essentials such as testbenches, timing models, flip-flop styles, and design optimization
+---
 
-What You Need Before Starting
+## How the Workshop is Organized  
 
-To get the most out of this workshop, you should have:
+Each day of the workshop is stored in its own folder, with a dedicated README covering concepts, examples, and lab work.  
 
-A basic background in digital circuits (logic gates, multiplexers, flip-flops)
+- [Day 1: Verilog RTL Design & First Steps in Synthesis](Day_1/README.md)  
+- [Day 2: Timing Libraries, Flip-Flop Coding, and Synthesis Strategies](Day_2/README.md)  
+- [Day 3: Optimizing Combinational & Sequential Circuits](Day_3/README.md)  
+- [Day 4: Gate-Level Simulation, Blocking vs Non-Blocking, and Debugging Mismatches](Day_4/README.md)  
+- [Day 5: Advanced Synthesis Optimization Techniques](Day_5/README.md)  
 
-Comfort with Linux terminal commands
+👉 Inside each day’s notes you’ll find:  
+- Conceptual explanations with diagrams  
+- Step-by-step lab instructions and commands  
+- Code samples and screenshots  
+- Best practices for writing reliable RTL  
 
-Access to a Linux machine (native or via WSL on Windows/macOS)
+---
 
-Installed tools: git, iverilog, gtkwave, yosys, and a code editor of your choice
+## License  
 
-How the Workshop is Organized
+This repository is shared under the **Attribution 4.0 International License**. See the [LICENSE](./LICENSE) file for more information.  
 
-Each day of the workshop is stored in its own folder, with a dedicated README covering concepts, examples, and lab work.
+---
 
-Day 1: Verilog RTL Design & First Steps in Synthesis
+## Credits 💡  
 
-Day 2: Timing Libraries, Flip-Flop Coding, and Synthesis Strategies
+Special thanks to:  
+- [Shon Taware](https://www.linkedin.com/in/shon-taware/)  
+- [Kunal Ghosh](https://www.linkedin.com/in/kunal-ghosh-vlsisystemdesign-com-28084836/)  
+- The open-source community behind **Yosys**, **GTKWave**, and the **Sky130 PDK**  
 
-Day 3: Optimizing Combinational & Sequential Circuits
-
-Day 4: Gate-Level Simulation, Blocking vs Non-Blocking, and Debugging Mismatches
-
-Day 5: Advanced Synthesis Optimization Techniques
-
-👉 Inside each day’s notes you’ll find:
-
-Conceptual explanations with diagrams
-
-Step-by-step lab instructions and commands
-
-Code samples and screenshots
-
-Best practices for writing reliable RTL
-
-License
-
-This repository is shared under the Attribution 4.0 International License. See the LICENSE
- file for more information.
-
-Credits 💡
-
-Special thanks to:
-
-Shon Taware
-
-Kunal Ghosh
-
-The open-source community behind Yosys, GTKWave, and the Sky130 PDK
+![Maintainer: Ahtesham](https://img.shields.io/badge/maintainer-Ahtesham-blue)  
