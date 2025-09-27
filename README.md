@@ -43,9 +43,9 @@ Each day of the workshop is stored in its own folder, with a dedicated README co
 
 - [Day 1: Verilog RTL Design & First Steps in Synthesis](Day_1/README.md)  
 - [Day 2: Timing Libraries, Flip-Flop Coding, and Synthesis Strategies](Day_2/README.md)  
-- [Day 3: Optimizing Combinational & Sequential Circuits](Day_3/README.md)  
-- [Day 4: Gate-Level Simulation, Blocking vs Non-Blocking, and Debugging Mismatches](Day_4/README.md)  
-- [Day 5: Advanced Synthesis Optimization Techniques](Day_5/README.md)  
+- [Day 3: Optimizing Combinational & Sequential Circuits]  
+- [Day 4: Gate-Level Simulation, Blocking vs Non-Blocking, and Debugging Mismatches] 
+- [Day 5: Advanced Synthesis Optimization Techniques] 
 
 👉 Inside each day’s notes you’ll find:  
 - Conceptual explanations with diagrams  
