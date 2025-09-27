@@ -1,1 +1,114 @@
+Day 1 – RTL Design Kickoff with Verilog, Simulation & Synthesis
 
+Welcome to Day 1 of the RTL Design Workshop.
+In this session, we’ll focus on the fundamentals of HDL design, simulation, and synthesis using open-source tools. By the end of the day, you’ll know how to describe simple logic in Verilog, simulate it with Icarus Verilog, visualize results in GTKWave, and synthesize it into real hardware gates using Yosys.
+
+📝 Agenda
+
+Key Concepts: Simulator, Design, Testbench
+
+First Steps with Icarus Verilog
+
+Mini Lab: 2-to-1 Multiplexer
+
+Understanding the Verilog Mux Code
+
+Introduction to Yosys & Standard Cell Libraries
+
+Hands-On: Synthesizing with Yosys
+
+Extra Tips & Common Pitfalls
+
+Summary
+
+1. Key Concepts: Simulator, Design, Testbench
+
+Design → Your Verilog module that represents logic (e.g., mux, adder, counter).
+
+Testbench → Stimulus generator that applies inputs and checks outputs. It is not hardware, just a virtual test environment.
+
+Simulator → A program (like iverilog) that runs both the design and testbench, producing a .vcd waveform file.
+
+🔎 The .vcd file = Value Change Dump, a time-stamped record of how signals change. Perfect for debugging with GTKWave.
+
+2. First Steps with Icarus Verilog
+
+Install the required tools (Ubuntu/Debian):
+
+sudo apt update
+sudo apt install iverilog gtkwave
+
+
+Simulation flow:
+
+Compile design + testbench with iverilog.
+
+Run simulation (binary output).
+
+View signals in gtkwave.
+
+3. Mini Lab: 2-to-1 Multiplexer
+Step 1 – Clone Workshop Files
+git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git
+cd sky130RTLDesignAndSynthesisWorkshop/verilog_files
+
+Step 2 – Run Simulation
+iverilog good_mux.v tb_good_mux.v
+./a.out
+gtkwave tb_good_mux.vcd
+
+4. Understanding the Verilog Mux Code
+module good_mux (input i0, input i1, input sel, output reg y);
+always @(*)
+begin
+    if (sel)
+        y <= i1;
+    else
+        y <= i0;
+end
+endmodule
+
+
+sel = 0 → output follows i0.
+
+sel = 1 → output follows i1.
+
+🧠 Note: This is a behavioral description. Later, Yosys will convert it into AND/OR/INV gates.
+
+5. Introduction to Yosys & Standard Cell Libraries
+
+Yosys = Open-source synthesis tool.
+
+Converts HDL → Gate-level netlist.
+
+Works with .lib files that contain characterized cells (NAND, NOR, INV, etc. with timing/power data).
+
+👉 Why multiple cell versions exist?
+
+Speed (fast gates but high power).
+
+Low power (slower, but energy efficient).
+
+Drive strength (some gates can drive bigger loads).
+
+6. Hands-On: Synthesizing with Yosys
+yosys
+
+
+Inside Yosys shell:
+
+read_liberty -lib /path/to/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog good_mux.v
+synth -top good_mux
+abc -liberty /path/to/sky130_fd_sc_hd__tt_025C_1v80.lib
+show
+
+
+This produces a schematic showing which standard cells implement the mux.
+
+7. Extra Tips & Common Pitfalls
+
+✅ Always check if .vcd file is created after simulation. If missing → likely testbench bug.
+✅ In GTKWave, use Search → Signals to quickly add all signals.
+⚠️ Don’t confuse blocking (=) with non-blocking (<=) assignments in Verilog. They behave differently in simulation.
+⚠️ If Yosys says library not found, make sure the .lib path is correct.
